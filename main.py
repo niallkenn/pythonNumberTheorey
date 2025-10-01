@@ -17,11 +17,19 @@ def convertBase():
     for digit in digits:
         strr = str(digit) + ', ' + strr
 
-    print('(' + strr[0:-2] + ')' + '\n')
+    if base <= 10:
+        strPrint = ''
+        for digit in digits:
+            strPrint += str(digit)
+        print(strPrint)
+    else:
+        print('(' + strr[0:-2] + ')' + '\n')
+    
     
 while running:
     print("1: Convert Base")
     mode = int(input("Select Mode: "))
     
     if mode == 1:
-        convertBase()
+        
+        convertBase()    
