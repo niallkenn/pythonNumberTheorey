@@ -24,12 +24,25 @@ def convertBase():
         print(strPrint)
     else:
         print('(' + strr[0:-2] + ')' + '\n')
+        
+def primeFactorisation():
+    n = int(input('Enter Number: '))
+    factors = []
+    current = 2
+    
+    while True:
+        if (n / current).is_integer() == 1:
+            n /= current
     
     
 while running:
     print("1: Convert Base")
+    print("-1: Exit")
     mode = int(input("Select Mode: "))
     
-    if mode == 1:
-        
-        convertBase()    
+    if mode == -1:
+        running = False
+    elif mode == 1:
+        convertBase()   
+    elif mode == 2:
+        primeFactorisation()
