@@ -29,14 +29,28 @@ def primeFactorisation():
     n = int(input('Enter Number: '))
     factors = []
     current = 2
+    strPrint = ''
     
     while True:
         if (n / current).is_integer() == 1:
             n /= current
+            factors.append(current)
+        else:
+            current+=1
+            
+        if n == 1:
+            break
+        
+    for fac in factors:
+        strPrint += str(fac)
+        strPrint += ', '
+        
+    print(strPrint[0:-2])
     
     
 while running:
     print("1: Convert Base")
+    print("2: Prime Factorisation\n")
     print("-1: Exit")
     mode = int(input("Select Mode: "))
     
