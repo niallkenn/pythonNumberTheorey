@@ -17,7 +17,7 @@ def convertBase():
     for digit in digits:
         strr = str(digit) + ', ' + strr
 
-    print('(' + strr[0:-2] + ')' + '\ngggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg')
+    print('(' + strr[0:-2] + ')' + '\n')
     
 while running:
     print("1: Convert Base")
